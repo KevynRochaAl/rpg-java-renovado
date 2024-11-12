@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
         String[][] mapaInicial = new String[6][6];
-        Character personagemJogavel = new Character("👨");
+        Character personagemJogavel = new Character("👨", mapaInicial);
         WorldGenerator worldGenerator = new WorldGenerator(mapaInicial, personagemJogavel);
         worldGenerator.showWorld(mapaInicial);
 
@@ -29,7 +29,7 @@ public class Main {
                         char key = (char) i;
                         switch (key) {
                             case 'A' -> {
-                                if(worldGenerator.moveCharacter("left", null)){
+                                if(personagemJogavel.moveCharacter("left", null)){
                                     worldGenerator.showWorld(mapaInicial);
                                     GeneralMessageService.showMenuMessage("action");
                                 } else {
@@ -38,7 +38,7 @@ public class Main {
 
                             }
                             case 'S' -> {
-                                if(worldGenerator.moveCharacter("down", null)){
+                                if(personagemJogavel.moveCharacter("down", null)){
                                     worldGenerator.showWorld(mapaInicial);
                                     GeneralMessageService.showMenuMessage("action");
                                 } else {
@@ -46,7 +46,7 @@ public class Main {
                                 }
                             }
                             case 'D' -> {
-                                if(worldGenerator.moveCharacter("right", null)){
+                                if(personagemJogavel.moveCharacter("right", null)){
                                     worldGenerator.showWorld(mapaInicial);
                                     GeneralMessageService.showMenuMessage("action");
                                 } else {
@@ -54,7 +54,7 @@ public class Main {
                                 }
                             }
                             case 'W' -> {
-                                if(worldGenerator.moveCharacter("up", null)){
+                                if(personagemJogavel.moveCharacter("up", null)){
                                     worldGenerator.showWorld(mapaInicial);
                                     GeneralMessageService.showMenuMessage("action");
                                 } else {
