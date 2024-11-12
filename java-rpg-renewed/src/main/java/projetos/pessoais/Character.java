@@ -4,8 +4,7 @@ public class Character {
     private String icon;
     private String[][] world;
     private int health;
-    private String equipedItem;
-    private String equipedWeapon;
+    private final String[] equipedItems = {" "," "," "};
     private int xPosition;
     private int yPosition;
 
@@ -15,8 +14,6 @@ public class Character {
         this.xPosition = 0;
         this.yPosition = 0;
         this.health = 5;
-        this.equipedItem = "🛼";
-        this.equipedWeapon = "🔪";
     }
 
     public String getIcon() {
@@ -59,20 +56,8 @@ public class Character {
         this.yPosition = yPosition;
     }
 
-    public String getEquipedItem() {
-        return equipedItem;
-    }
-
-    public void setEquipedItem(String equipedItem) {
-        this.equipedItem = equipedItem;
-    }
-
-    public String getEquipedWeapon() {
-        return equipedWeapon;
-    }
-
-    public void setEquipedWeapon(String equipedWeapon) {
-        this.equipedWeapon = equipedWeapon;
+    public String[] getEquipedItems() {
+        return equipedItems;
     }
 
     public boolean moveCharacter(String direction, String exceptionIcon){

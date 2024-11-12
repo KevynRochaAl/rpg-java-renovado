@@ -13,9 +13,12 @@ public class GeneralMessageService {
                 \n
                 @============================@
                 | W A S D = Movimentação     |
+                | 1 = Utiliza item no slot 1 |
+                | 2 = Utiliza item no slot 2 |
+                | 3 = Utiliza item no slot 3 |
                 | H = Menu de controles      |
-                | Q = encerrar execução      |
-                | B = voltar ao jogo         |
+                | B = Voltar ao jogo         |
+                | Q = Encerrar execução      |
                 @============================@
                 """);
             }
@@ -23,7 +26,7 @@ public class GeneralMessageService {
     }
     public static void showCharacterRelatedMessage(Character character, String messageType){
         switch (messageType){
-            case "menu" -> System.out.println("\n"+"-".repeat(23) +"\n❤️HP: "+character.getHealth()+"/5 "+character.getEquipedItem()+" "+character.getEquipedWeapon()+"\n"+"-".repeat(23));
+            case "menu" -> System.out.println("\n"+"-".repeat(24) +"\n❤️HP: "+character.getHealth()+"/5 1["+character.getEquipedItems()[0]+"] 2["+character.getEquipedItems()[0]+"] 3["+character.getEquipedItems()[0]+"]\n"+"-".repeat(24));
         }
     }
 }

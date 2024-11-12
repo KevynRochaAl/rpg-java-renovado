@@ -38,7 +38,6 @@ public class Main {
                                     GeneralMessageService.showCharacterRelatedMessage(personagemJogavel, "menu");
                                     worldGenerator.showWorld(mapaInicial);
                                 }
-
                             }
                             case 'S' -> {
                                 if(personagemJogavel.moveCharacter("down", null)){
