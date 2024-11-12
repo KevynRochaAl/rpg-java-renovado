@@ -14,6 +14,7 @@ public class Main {
         String[][] mapaInicial = new String[6][6];
         Character personagemJogavel = new Character("👨", mapaInicial);
         WorldGenerator worldGenerator = new WorldGenerator(mapaInicial, personagemJogavel);
+        GeneralMessageService.showCharacterRelatedMessage(personagemJogavel, "menu");
         worldGenerator.showWorld(mapaInicial);
 
         GeneralMessageService.showMenuMessage("help");
@@ -30,40 +31,52 @@ public class Main {
                         switch (key) {
                             case 'A' -> {
                                 if(personagemJogavel.moveCharacter("left", null)){
+                                    GeneralMessageService.showCharacterRelatedMessage(personagemJogavel, "menu");
                                     worldGenerator.showWorld(mapaInicial);
                                     GeneralMessageService.showMenuMessage("action");
                                 } else {
+                                    GeneralMessageService.showCharacterRelatedMessage(personagemJogavel, "menu");
                                     worldGenerator.showWorld(mapaInicial);
                                 }
 
                             }
                             case 'S' -> {
                                 if(personagemJogavel.moveCharacter("down", null)){
+                                    GeneralMessageService.showCharacterRelatedMessage(personagemJogavel, "menu");
                                     worldGenerator.showWorld(mapaInicial);
                                     GeneralMessageService.showMenuMessage("action");
                                 } else {
+                                    GeneralMessageService.showCharacterRelatedMessage(personagemJogavel, "menu");
                                     worldGenerator.showWorld(mapaInicial);
                                 }
                             }
                             case 'D' -> {
                                 if(personagemJogavel.moveCharacter("right", null)){
+                                    GeneralMessageService.showCharacterRelatedMessage(personagemJogavel, "menu");
                                     worldGenerator.showWorld(mapaInicial);
                                     GeneralMessageService.showMenuMessage("action");
                                 } else {
+                                    GeneralMessageService.showCharacterRelatedMessage(personagemJogavel, "menu");
                                     worldGenerator.showWorld(mapaInicial);
                                 }
                             }
                             case 'W' -> {
                                 if(personagemJogavel.moveCharacter("up", null)){
+                                    GeneralMessageService.showCharacterRelatedMessage(personagemJogavel, "menu");
                                     worldGenerator.showWorld(mapaInicial);
                                     GeneralMessageService.showMenuMessage("action");
                                 } else {
+                                    GeneralMessageService.showCharacterRelatedMessage(personagemJogavel, "menu");
                                     worldGenerator.showWorld(mapaInicial);
                                 }
                             }
                             case 'H' -> {
                                 GeneralMessageService.showMenuMessage("controls");
                                 GeneralMessageService.showMenuMessage("action");
+                            }
+                            case 'B' -> {
+                                GeneralMessageService.showCharacterRelatedMessage(personagemJogavel, "menu");
+                                worldGenerator.showWorld(mapaInicial);
                             }
                             case 'Q' -> {
                                 GeneralMessageService.showMenuMessage("exit");
